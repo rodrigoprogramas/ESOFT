@@ -24,8 +24,17 @@ public class ProblemOne {
     }
 
     private static void moveHigherElementToTheLastIndexablePositionOfTheArray(int[] array, int lastIndexablePosition) {
-        throw new UnsupportedOperationException(); //it means that the method is not implemented yet
         //TODO: Students should implement this method
+        int arraySize = array.length;
+        for(int i = 0; i < lastIndexablePosition; i++){
+            if(firstIsHigherThanSecond(array[i],array[i + 1])){
+                int temp = array[i];
+                array[i] =  array[i + 1];
+                array[i+1] = temp;
+
+            }
+
+        }
     }
 
     private static boolean firstIsHigherThanSecond(int first, int second) {
