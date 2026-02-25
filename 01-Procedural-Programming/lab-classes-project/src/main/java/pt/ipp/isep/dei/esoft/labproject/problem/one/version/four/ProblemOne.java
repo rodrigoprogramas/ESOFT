@@ -24,15 +24,16 @@ public class ProblemOne {
     }
 
     private static void moveHigherElementToTheLastIndexablePositionOfTheArray(int[] array, int lastIndexablePosition) {
-        //TODO: Students should implement this method
         int arraySize = array.length;
         for(int i = 0; i < lastIndexablePosition; i++){
-            if(firstIsHigherThanSecond(array[i],array[i + 1])){
-                int temp = array[i];
+           if(firstIsHigherThanSecond(array[i],array[i + 1])){
+             swapArrayElements(array,i, i+1);
+               /* int temp = array[i];
                 array[i] =  array[i + 1];
-                array[i+1] = temp;
+                array[i+1] = temp;*/
 
             }
+
 
         }
     }
