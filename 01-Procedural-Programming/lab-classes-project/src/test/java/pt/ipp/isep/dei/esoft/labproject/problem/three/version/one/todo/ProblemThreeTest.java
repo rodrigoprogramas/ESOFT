@@ -10,7 +10,6 @@ class ProblemThreeTest {
 
     @DisplayName("Ensure sorting null students array by number returns false")
     @Test
-    @Disabled
     public void ensureSortingNullNumbersArrayByNumberReturnsFalse() {
         //Arrange
         Student[] students = null;
@@ -24,7 +23,6 @@ class ProblemThreeTest {
 
     @DisplayName("Ensure sorting empty array by number works")
     @Test
-    @Disabled
     public void ensureSortingEmptyArraysByNumberWorks() {
         //Arrange
         Student[] students = {};
@@ -46,142 +44,140 @@ class ProblemThreeTest {
 
     @DisplayName("Ensure sorting one element array by number works")
     @Test
-    @Disabled
     public void ensureSortingOneElementArraysByNumberWorks() {
         //Arrange
-//        Student studentOne = new Student();
+        Student studentOne = new Student(1200001, "Ana Maria Sousa");
+        studentOne.doEvaluation(16);
 //        studentOne.number = 1200001;
 //        studentOne.name = "Ana Maria Sousa";
 //        studentOne.grade = 16;
 
-//        Student[] students = {studentOne};
-//
-//        Student[] expectedStudents = {studentOne};
+        Student[] students = {studentOne};
+
+        Student[] expectedStudents = {studentOne};
 
         // Act
-//        boolean result = ProblemThree.sortStudentsByAscendingNumber(students);
+        boolean result = ProblemThree.sortStudentsByAscendingNumber(students);
 
         //Assert
-//        assertTrue(result);
+        assertTrue(result);
 
         //check dimension
-//        assertEquals(expectedStudents.length, students.length);
+        assertEquals(expectedStudents.length, students.length);
 
         // check array content
-//        assertArrayEquals(expectedStudents, students);
+        assertArrayEquals(expectedStudents, students);
     }
 
     @DisplayName("Ensure sorting two sorted elements array by number works")
     @Test
-    @Disabled
     public void ensureSortingTwoSortedElementArraysByNumberWorks() {
         //Arrange
-//        Student studentOne = new Student();
-//        studentOne.number = 1200001;
-//        studentOne.name = "Ana Maria Sousa";
-//        studentOne.grade = 16;
-//
-//        Student studentTwo = new Student();
-//        studentTwo.number = 1200032;
-//        studentTwo.name = "André Pinto da Silva";
-//        studentTwo.grade = 12;
-//
-//        Student[] students = {studentOne, studentTwo};
-//
-//        Student[] expectedStudents = {studentOne, studentTwo};
+        Student studentOne = new Student(1200001, "Ana Maria Sousa");
+        studentOne.doEvaluation(16);
+
+        Student studentTwo = new Student(1200032,"André Pinto da Silva");
+        studentTwo.doEvaluation(12);
+
+        Student[] students = {studentOne, studentTwo};
+
+        Student[] expectedStudents = {studentOne, studentTwo};
 
         // Act
-//        boolean result = ProblemThree.sortStudentsByAscendingNumber(students);
+        boolean result = ProblemThree.sortStudentsByAscendingNumber(students);
 
         //Assert
-//        assertTrue(result);
+       assertTrue(result);
 
         //check dimension
-//        assertEquals(expectedStudents.length, students.length);
+        assertEquals(expectedStudents.length, students.length);
 
         // check array content
-//        assertArrayEquals(expectedStudents, students);
+           assertArrayEquals(expectedStudents, students);
     }
 
     @DisplayName("Ensure sorting two unsorted elements array by number works")
     @Test
-    @Disabled
     public void ensureSortingTwoUnsortedElementArraysByNumberWorks() {
         //Arrange
 
-//        Student studentOne = new Student();
+        Student studentOne = new Student(1200001, "Ana Maria Sousa");
+        studentOne.doEvaluation(16);
 //        studentOne.number = 1200001;
 //        studentOne.name = "Ana Maria Sousa";
 //        studentOne.grade = 16;
 //
-//        Student studentTwo = new Student();
+        Student studentTwo = new Student(1200032,"André Pinto da Silva");
+        studentTwo.doEvaluation(12);
 //        studentTwo.number = 1200032;
 //        studentTwo.name = "André Pinto da Silva";
 //        studentTwo.grade = 12;
 //
-//        Student[] students = {studentTwo, studentOne};
+        Student[] students = {studentTwo, studentOne};
 //
-//        Student[] expectedStudents = {studentOne, studentTwo};
+        Student[] expectedStudents = {studentOne, studentTwo};
 
         // Act
-//        boolean result = ProblemThree.sortStudentsByAscendingNumber(students);
+        boolean result = ProblemThree.sortStudentsByAscendingNumber(students);
 
         //Assert
-//        assertTrue(result);
+        assertTrue(result);
 
         //check dimension
-//        assertEquals(expectedStudents.length, students.length);
+        assertEquals(expectedStudents.length, students.length);
 
         // check array content
-//        assertArrayEquals(expectedStudents, students);
+        assertArrayEquals(expectedStudents, students);
     }
 
     @DisplayName("Ensure sorting unsorted array by number works")
     @Test
-    @Disabled
     public void ensureSortingUnsortedArraysByNumberWorks() {
         //Arrange
-//        Student studentOne = new Student();
+        Student studentOne = new Student(1200001, "Ana Maria Sousa");
+        studentOne.doEvaluation(16);
 //        studentOne.number = 1200001;
 //        studentOne.name = "Ana Maria Sousa";
 //        studentOne.grade = 16;
 //
-//        Student studentTwo = new Student();
+        Student studentTwo = new Student(1200032, "André Pinto da Silva");
+        studentTwo.doEvaluation(12);
 //        studentTwo.number = 1200032;
 //        studentTwo.name = "André Pinto da Silva";
 //        studentTwo.grade = 12;
 //
-//        Student studentThree = new Student();
+        Student studentThree = new Student(1190432, "Martim Gomes Costa");
+        studentThree.doEvaluation(17);
 //        studentThree.number = 1190432;
 //        studentThree.name = "Martim Gomes Costa";
 //        studentThree.grade = 17;
 //
-//        Student studentFour = new Student();
+        Student studentFour = new Student(1181208, "Mariana Gonçalves Mendes");
+        studentFour.doEvaluation(14);
 //        studentFour.number = 1181208;
 //        studentFour.name = "Mariana Gonçalves Mendes";
 //        studentFour.grade = 14;
 //
-//        Student[] students = {studentOne, studentTwo, studentThree, studentFour};
+        Student[] students = {studentOne, studentTwo, studentThree, studentFour};
 //
-//        Student[] expectedStudents = {studentFour, studentThree, studentOne, studentTwo};
+        Student[] expectedStudents = {studentFour, studentThree, studentOne, studentTwo};
 
         // Act
-//        boolean result = ProblemThree.sortStudentsByAscendingNumber(students);
+        boolean result = ProblemThree.sortStudentsByAscendingNumber(students);
 
         //Assert
-//        assertTrue(result);
+        assertTrue(result);
 
         //check dimension
-//        assertEquals(expectedStudents.length, students.length);
+        assertEquals(expectedStudents.length, students.length);
 
         // check array content
-//        assertArrayEquals(expectedStudents, students);
+        assertArrayEquals(expectedStudents, students);
     }
 
 
     @DisplayName("Ensure sorting null students array by grade returns false")
     @Test
-    @Disabled
     public void ensureSortingNullNumbersArrayByGradeReturnsFalse() {
         //Arrange
         Student[] students = null;
@@ -195,7 +191,6 @@ class ProblemThreeTest {
 
     @DisplayName("Ensure sorting empty array by grade works")
     @Test
-    @Disabled
     public void ensureSortingEmptyArraysByGradeWorks() {
         //Arrange
         Student[] students = {};
@@ -217,135 +212,139 @@ class ProblemThreeTest {
 
     @DisplayName("Ensure sorting one element array by grade works")
     @Test
-    @Disabled
     public void ensureSortingOneElementArraysByGradeWorks() {
         //Arrange
-//        Student studentOne = new Student();
+        Student studentOne = new Student(1200001, "Ana Maria Sousa");
+        studentOne.doEvaluation(16);
 //        studentOne.number = 1200001;
 //        studentOne.name = "Ana Maria Sousa";
 //        studentOne.grade = 16;
 //
-//        Student[] students = {studentOne};
+        Student[] students = {studentOne};
 //
-//        Student[] expectedStudents = {studentOne};
+        Student[] expectedStudents = {studentOne};
 
         // Act
-//        boolean result = ProblemThree.sortStudentsByDescendingGrade(students);
+        boolean result = ProblemThree.sortStudentsByDescendingGrade(students);
 
         //Assert
-//        assertTrue(result);
+        assertTrue(result);
 
         //check dimension
-//        assertEquals(expectedStudents.length, students.length);
+        assertEquals(expectedStudents.length, students.length);
 
         // check array content
-//        assertArrayEquals(expectedStudents, students);
+        assertArrayEquals(expectedStudents, students);
     }
 
     @DisplayName("Ensure sorting two sorted elements array by grade works")
     @Test
-    @Disabled
     public void ensureSortingTwoSortedElementArraysByGradeWorks() {
         //Arrange
-//        Student studentOne = new Student();
+        Student studentOne = new Student(1200001, "Ana Maria Sousa");
+        studentOne.doEvaluation(16);
 //        studentOne.number = 1200001;
 //        studentOne.name = "Ana Maria Sousa";
 //        studentOne.grade = 16;
 //
-//        Student studentTwo = new Student();
+        Student studentTwo = new Student(1200032, "André Pinto da Silva");
+        studentTwo.doEvaluation(12);
 //        studentTwo.number = 1200032;
 //        studentTwo.name = "André Pinto da Silva";
 //        studentTwo.grade = 12;
 //
-//        Student[] students = {studentOne, studentTwo};
+        Student[] students = {studentOne, studentTwo};
 //
-//        Student[] expectedStudents = {studentOne, studentTwo};
+        Student[] expectedStudents = {studentOne, studentTwo};
 
         // Act
-//        boolean result = ProblemThree.sortStudentsByDescendingGrade(students);
+        boolean result = ProblemThree.sortStudentsByDescendingGrade(students);
 
         //Assert
-//        assertTrue(result);
+        assertTrue(result);
 
         //check dimension
-//        assertEquals(expectedStudents.length, students.length);
+        assertEquals(expectedStudents.length, students.length);
 
         // check array content
-//        assertArrayEquals(expectedStudents, students);
+        assertArrayEquals(expectedStudents, students);
     }
 
     @DisplayName("Ensure sorting two unsorted elements array by grade works")
     @Test
-    @Disabled
     public void ensureSortingTwoUnsortedElementArraysByGradeWorks() {
         //Arrange
 
-//        Student studentOne = new Student();
+        Student studentOne = new Student(1200001, "Ana Maria Sousa");
+        studentOne.doEvaluation(16);
 //        studentOne.number = 1200001;
 //        studentOne.name = "Ana Maria Sousa";
 //        studentOne.grade = 16;
 //
-//        Student studentTwo = new Student();
+        Student studentTwo = new Student(1200032, "André Pinto da Silva");
 //        studentTwo.number = 1200032;
 //        studentTwo.name = "André Pinto da Silva";
 //        studentTwo.grade = 12;
 //
-//        Student[] students = {studentTwo, studentOne};
+        Student[] students = {studentTwo, studentOne};
 //
-//        Student[] expectedStudents = {studentOne, studentTwo};
+        Student[] expectedStudents = {studentOne, studentTwo};
 
         // Act
-//        boolean result = ProblemThree.sortStudentsByDescendingGrade(students);
+        boolean result = ProblemThree.sortStudentsByDescendingGrade(students);
 
         //Assert
-//        assertTrue(result);
+        assertTrue(result);
 
         //check dimension
-//        assertEquals(expectedStudents.length, students.length);
+        assertEquals(expectedStudents.length, students.length);
 
         // check array content
-//        assertArrayEquals(expectedStudents, students);
-    }
+        assertArrayEquals(expectedStudents, students);
+}
 
     @DisplayName("Ensure sorting unsorted array by grade works")
     @Test
-    @Disabled
     public void ensureSortingUnsortedArraysByGradeWorks() {
         //Arrange
-//        Student studentOne = new Student();
+        Student studentOne = new Student(1200001, "Ana Maria Sousa");
+        studentOne.doEvaluation(16);
 //        studentOne.number = 1200001;
 //        studentOne.name = "Ana Maria Sousa";
 //        studentOne.grade = 16;
 //
-//        Student studentTwo = new Student();
+        Student studentTwo = new Student(1200032, "André Pinto da Silva");
+        studentTwo.doEvaluation(12);
 //        studentTwo.number = 1200032;
 //        studentTwo.name = "André Pinto da Silva";
 //        studentTwo.grade = 12;
 //
-//        Student studentThree = new Student();
+        Student studentThree = new Student(1190432, "Martim Gomes Costa");
+        studentThree.doEvaluation(17);
 //        studentThree.number = 1190432;
 //        studentThree.name = "Martim Gomes Costa";
 //        studentThree.grade = 17;
 //
-//        Student studentFour = new Student();
+        Student studentFour = new Student(1181208, "Mariana Gonçalves Mendes");
+        studentFour.doEvaluation(14);
 //        studentFour.number = 1181208;
 //        studentFour.name = "Mariana Gonçalves Mendes";
 //        studentFour.grade = 14;
 //
-//        Student[] students = {studentOne, studentTwo, studentThree, studentFour};
+        Student[] students = {studentOne, studentTwo, studentThree, studentFour};
 //
-//        Student[] expectedStudents = {studentThree, studentOne, studentFour, studentTwo};
+        Student[] expectedStudents = {studentThree, studentOne, studentFour, studentTwo};
 
         // Act
-//        boolean result = ProblemThree.sortStudentsByDescendingGrade(students);
+        boolean result = ProblemThree.sortStudentsByDescendingGrade(students);
 
         //Assert
-//        assertTrue(result);
+        assertTrue(result);
 
         //check dimension
-//        assertEquals(expectedStudents.length, students.length);
+        assertEquals(expectedStudents.length, students.length);
 
         // check array content
-//        assertArrayEquals(expectedStudents, students);
+        assertArrayEquals(expectedStudents, students);
     }
 }

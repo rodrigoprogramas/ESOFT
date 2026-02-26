@@ -10,13 +10,9 @@ public class ProblemThree {
         //Sort the students in ascending order using two for loops
         for (int i = 0; i < arraySize; i++) {
             for (int j = 0; j < arraySize - i - 1; j++) {
-                throw new UnsupportedOperationException(); //it means that the method is not implemented yet
-                //TODO: Students should fix the errors in the following code
-
-//                if (students[j].number > students[j + 1].number) {
-//                    //swap elements if not in order - in students
-//                    swapStudentArrayElements(students, j, j + 1);
-//                }
+                if (students[j].getNumber() > students[j + 1].getNumber()) {
+                //swap elements if not in order - in students
+                swapStudentArrayElements(students, j, j + 1);}
             }
         }
         return true;
@@ -38,13 +34,10 @@ public class ProblemThree {
         //Sort the students in ascending order using two for loops
         for (int i = 0; i < arraySize; i++) {
             for (int j = 0; j < arraySize - i - 1; j++) {
-                throw new UnsupportedOperationException(); //it means that the method is not implemented yet
-                //TODO: Students should fix the errors in the following code
-
-//                if (students[j].grade < students[j + 1].grade) {
-//                    //swap elements if not in order - in students
-//                    swapStudentArrayElements(students, j, j + 1);
-//                }
+                if (students[j].getGrade() < students[j + 1].getGrade()) {
+                    //swap elements if not in order - in students
+                    swapStudentArrayElements(students, j, j + 1);
+                }
             }
         }
         return true;

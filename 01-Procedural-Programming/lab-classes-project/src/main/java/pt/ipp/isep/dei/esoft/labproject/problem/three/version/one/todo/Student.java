@@ -9,36 +9,59 @@ public class Student {
 
     // Constructor
     public Student(int number, String name) {
-        throw new UnsupportedOperationException(); //it means that the constructor is not implemented yet
-        //TODO: Students should implement this constructor
+        if (isValidNumber(number)){
+            this.number = number;
+        }else{
+            throw new IllegalArgumentException("Student number need to be 7 digits");
+        }
+        if(isValidName(name)){
+            this.name = name;
+        }else {
+            throw new IllegalArgumentException("Student name cannot be shorter than 5 chars");
+        }
+        this.grade = -1;
     }
 
     // Operations
     private boolean isValidNumber(int number) {
-        throw new UnsupportedOperationException(); //it means that the method is not implemented yet
-        //TODO: Students should implement this method
+        if (number != Math.abs(number)){
+            return false;
+        }
+
+        String strNumber = Integer.toString(number);
+        return (strNumber.length() == 7);
     }
     private boolean isValidName(String name) {
-        throw new UnsupportedOperationException(); //it means that the method is not implemented yet
-        //TODO: Students should implement this method
+        if (name == null){
+            return false;
+        }
+        name = name.trim();
+        return (name.length() >= 5);
     }
 
     private boolean isValidGrade(int grade) {
-        throw new UnsupportedOperationException(); //it means that the method is not implemented yet
-        //TODO: Students should implement this method
+        return (grade < 20 && grade >= 0);
     }
 
     private boolean isEvaluated() {
-        throw new UnsupportedOperationException(); //it means that the method is not implemented yet
-        //TODO: Students should implement this method
+        return (this.grade >= 0);
     }
 
     public void doEvaluation(int grade) {
-        throw new UnsupportedOperationException(); //it means that the method is not implemented yet
-        //TODO: Students should implement this method
+        if (isValidGrade(grade) && !this.isEvaluated()){
+            this.grade = grade;
+        }
     }
 
     public boolean isApproved() {
         return (this.grade >= 10);
+    }
+
+    public int getNumber(){
+        return this.number;
+    }
+
+    public int getGrade(){
+        return this.grade;
     }
 }
