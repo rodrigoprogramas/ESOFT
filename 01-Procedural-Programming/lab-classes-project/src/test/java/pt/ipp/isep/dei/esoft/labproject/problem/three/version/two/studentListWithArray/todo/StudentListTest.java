@@ -10,7 +10,6 @@ class StudentListTest {
 
     @DisplayName("Ensure creating a studentlist works")
     @Test
-    @Disabled
     public void ensureCreateStudentListWorks() {
         // Act
         StudentList stList = new StudentList(); // StudentList empty
@@ -22,7 +21,6 @@ class StudentListTest {
 
     @DisplayName("Ensure creating a studentlist with some elements works")
     @Test
-    @Disabled
     public void ensureCreateStudentListWithSomeElementsWorks() {
         // Arrange
         Student studentOne = new Student(1200001,"Ana Maria Sousa");
@@ -44,7 +42,6 @@ class StudentListTest {
 
     @DisplayName("Ensure sorting an unsorted array by grade works")
     @Test
-    @Disabled
     public void ensureSortingUnsortedArraysByGradeWorks() {
         // Arrange
         Student studentOne = new Student(1200001,"Ana Maria Sousa");
@@ -68,7 +65,6 @@ class StudentListTest {
 
     @DisplayName("Ensure add a different student when array not empty works")
     @Test
-    @Disabled
     public void ensureAddDifferentStudentWhenArrayNotEmptyWorks(){
         // Arrange
         Student studentOne = new Student(1200054, "Moreira");
