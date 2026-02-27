@@ -158,7 +158,6 @@ class StudentListTest {
 
     @DisplayName("Ensure remove the same student twice returns false")
     @Test
-    @Disabled
     public void ensureRemoveSameStudentTwiceReturnsFalse(){
         // Arrange
         Student studentOne = new Student(1200054, "Moreira");

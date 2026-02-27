@@ -81,7 +81,7 @@ public class StudentList {
     private Student[] copyStudentsFromArray(Student[] students, int start, int size) {
         Student[] copyArray = new Student[size];
         for (int i = 0; i < size; i++) {
-            copyArray[i] = students[start + 1];
+            copyArray[i] = students[start + i];
         }
         return copyArray;
     }
