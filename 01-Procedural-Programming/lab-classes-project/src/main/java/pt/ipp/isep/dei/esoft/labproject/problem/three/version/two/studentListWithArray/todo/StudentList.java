@@ -61,27 +61,31 @@ public class StudentList {
     }
 
     public boolean remove(Student student){
-            if (student == null) return false;
-            if (exists(student)){
-               int removeIndex = this.getIndexOf(student);
-               if(removeIndex < 0) return false;
-               Student[] firstSlice = copyStudentsFromArray(this.students, removeIndex);
-               Student[] secondSlice = copyStudentsFromArray(this.students, removeIndex,this.students.length-removeIndex-1);
-               this.students = this.join(firstSlice,secondSlice);
-               return true;
-            }
+        if (student == null)
             return false;
-
+        int idx = this.getIndexOf(student);
+        if (idx < 0)
+            return false;
+        Student[] leftSide = this.copyStudentsFromArray(this.students,idx);
+        Student[] rightSide = this.copyStudentsFromArray(this.students, idx+1, this.students.length-idx-1);
+        this.students = this.join(leftSide, rightSide);
+        return true;
     }
 
     private Student[] copyStudentsFromArray(Student[] students, int size) {
-      return copyStudentsFromArray(students,0,size);
+        Student[] copyArray = new Student[size];
+        for (int count = 0; (count < size) && (count < students.length); count++) {
+            copyArray[count] = students[count];
+        }
+        return copyArray;
     }
 
     private Student[] copyStudentsFromArray(Student[] students, int start, int size) {
         Student[] copyArray = new Student[size];
-        for (int i = 0; i < size; i++) {
-            copyArray[i] = students[start + i];
+        int count = 0;
+        for (int i = start; (count < size) && (i < students.length); i++) {
+            copyArray[i-start] = students[i];
+            count++;
         }
         return copyArray;
     }
