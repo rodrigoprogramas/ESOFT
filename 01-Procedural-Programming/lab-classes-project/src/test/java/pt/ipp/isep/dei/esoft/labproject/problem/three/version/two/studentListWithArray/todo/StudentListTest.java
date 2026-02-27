@@ -83,7 +83,6 @@ class StudentListTest {
 
     @DisplayName("Ensure add the same student twice fails")
     @Test
-    @Disabled
     public void ensureAddSameStudentTwiceFails(){
         // Arrange
         Student studentOne = new Student(1200054, "Moreira");
@@ -101,7 +100,6 @@ class StudentListTest {
 
     @DisplayName("Ensure add a student with the same number fails")
     @Test
-    @Disabled
     public void ensureAddStudentWithSameNumberFails(){
         // Arrange
         Student studentOne = new Student(1200054, "Moreira");
@@ -120,7 +118,6 @@ class StudentListTest {
 
     @DisplayName("ensure add null fails")
     @Test
-    @Disabled
     public void ensureAddNullFails(){
         // Arrange
         Student studentOne = new Student(1200054, "Moreira");
@@ -138,7 +135,6 @@ class StudentListTest {
 
     @DisplayName("Ensure remove the middle student in several works")
     @Test
-    @Disabled
     public void ensureRemoveMiddleStudentInSeveralWorks(){
         // Arrange
         Student studentOne = new Student(1200054, "Moreira");

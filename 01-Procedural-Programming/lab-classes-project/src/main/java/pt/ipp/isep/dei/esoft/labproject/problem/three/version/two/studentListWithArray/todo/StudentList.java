@@ -55,7 +55,7 @@ public class StudentList {
     public boolean add(Student student){
         if (student == null) return false;
         if (exists(student)) return false;
-        this.copyStudentsFromArray(this.students,this.students.length + 1);
+        this.students = this.copyStudentsFromArray(this.students,this.students.length + 1);
         this.students[this.students.length - 1] = student;
         return true;
     }
@@ -66,7 +66,7 @@ public class StudentList {
                int removeIndex = this.getIndexOf(student);
                if(removeIndex < 0) return false;
                Student[] firstSlice = copyStudentsFromArray(this.students, removeIndex);
-               Student[] secondSlice = copyStudentsFromArray(this.students, removeIndex + 1,this.students.length-removeIndex-1);
+               Student[] secondSlice = copyStudentsFromArray(this.students, removeIndex,this.students.length-removeIndex-1);
                this.students = this.join(firstSlice,secondSlice);
                return true;
             }
@@ -80,8 +80,8 @@ public class StudentList {
 
     private Student[] copyStudentsFromArray(Student[] students, int start, int size) {
         Student[] copyArray = new Student[size];
-        for (int i = 0; i < size && (start + i) < students.length; i++) {
-            copyArray[i] = students[start + i];
+        for (int i = 0; i < size; i++) {
+            copyArray[i] = students[start + 1];
         }
         return copyArray;
     }
@@ -95,7 +95,7 @@ public class StudentList {
         }
 
         for(int j = 0 ; j < students2.length; j++){
-            joinArray[students1.length + j] = students2[j];
+            joinArray[j + students1.length] = students2[j];
         }
 
         return joinArray;
